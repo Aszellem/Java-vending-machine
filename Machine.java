@@ -2,7 +2,7 @@ public class Machine {
 
     private Item[][] items;
 
-    //It uses a nested loop to copy every object from the parameter into the field.
+    // It uses a nested loop to copy every object from the parameter into the field.
     public Machine(Item[][] items) {
         this.items = new Item[items.length][items[0].length];
         for (int i = 0; i < items.length; i++) {
@@ -34,7 +34,10 @@ public class Machine {
      */
 
     public boolean dispense(int row, int spot) {
-
+        if (items[row][spot].getQuantity() > 0) {
+            items[row][spot].setQuantity(items[row][spot].getQuantity() - 1);
+            return true;
+        }
         return false;
     }
 

@@ -12,9 +12,8 @@ public class Main {
         };
 
         Machine machine = new Machine(items);
-        Item item = machine.getItem(2, 1);
-        item.setPrice(0.11);
-        machine.setItem(item, 2, 1);
-        System.out.println(machine.getItem(2, 1));
+        machine.dispense(0, 0);
+        machine.dispense(0, 0);
+        System.out.println(machine.getItem(0, 0));
     }
 }
