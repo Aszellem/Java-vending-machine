@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Machine {
 
     private Item[][] items;
@@ -41,4 +43,19 @@ public class Machine {
         return false;
     }
 
+    @Override
+    public String toString() {
+        String temp = "";
+        for (int i = 0; i < items.length; i++) {
+            temp += "\t";
+            for (int j = 0; j < items[i].length; j++) {
+                temp += items[i][j].toString() + " ";
+            }
+            temp += "\n\n";
+        }
+        temp += "\t************************************************";
+        return temp;
+    }
+    
+    
 }

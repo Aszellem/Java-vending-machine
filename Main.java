@@ -12,8 +12,6 @@ public class Main {
         };
 
         Machine machine = new Machine(items);
-        machine.dispense(0, 0);
-        machine.dispense(0, 0);
-        System.out.println(machine.getItem(0, 0));
+        System.out.println(machine);
     }
 }
